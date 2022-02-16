@@ -2,12 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .form-group {
+    @apply h-16;
+  }
+  label {
+    @apply relative bottom-0.5;
+  }
+  input {
+    @apply w-full h-8  rounded-md border border-solid border-black shadow-sm valid:border-green-600 invalid:border-red-600 transition-all duration-300;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e4e7eb;
 }
 
 code {
